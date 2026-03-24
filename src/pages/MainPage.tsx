@@ -1,12 +1,14 @@
+import Layout from "../components/Layout/Layout";
 import MainContent from "../components/MainContent";
 import Recents from "../components/Recents";
 
 const MainPage = () => {
   return (
-    <>
-      <MainContent />
-      <Recents />
-    </>
+    <Layout
+      // leftSlot={<BaseList />}
+      centerSlot={<MainContent />}
+      rightSlot={<Recents />}
+    />
   );
 }
 

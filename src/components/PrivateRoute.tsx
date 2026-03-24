@@ -8,7 +8,7 @@ type PrivateRouteProps = {
 
 const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
 //   const { isAuth } = useAuthStore();
-  const isAuth = false;
+  const isAuth = true;
   
   if (!isAuth) {
     return <Navigate to={LOGIN_ROUTE} replace />;

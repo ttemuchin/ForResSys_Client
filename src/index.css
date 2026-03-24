@@ -1,3 +1,32 @@
 body {
   background-color: rgb(255, 255, 255);
 }
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+/* https://bestfonts.pro/font/euclid-circular-b?ysclid=mn4efcvd52589034610 ! light*/
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('./assets/fonts/Euclid-Circular-B/EuclidCircularB-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Euclid Circular B', 'Montserrat', sans-serif;
+  color: #2d2d2d;
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,9 +1,12 @@
+import Layout from "../components/Layout/Layout";
 
 const Auth = () => {
   return (
-    <>
-      Auth
-    </>
+    <Layout
+      // leftSlot={<BaseList />}
+      centerSlot={"AUTH"}
+      // rightSlot={<BaseAction />}
+    />
   );
 }
 

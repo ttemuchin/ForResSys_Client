@@ -1,8 +1,12 @@
+import Layout from "../components/Layout/Layout";
+
 const ErrorPage = () => {
   return (
-    <>
-      ErrorPage
-    </>
+    <Layout
+      // leftSlot={<BaseList />}
+      centerSlot={"ERROR"}
+      // rightSlot={<BaseAction />}
+    />
   );
 }
 
