@@ -1,0 +1,50 @@
+.container {
+  width: 182px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-family: 'Gotham', 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  color: #2b2b2b;
+  margin: 0;
+  padding: 0;
+}
+
+.commandsList {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 164px;
+}
+
+.commandItem {
+  font-family: 'Euclid Circular B', 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  color: #2b2b2b;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  transition: opacity 0.2s ease;
+  width: 100%;
+}
+
+.commandItem:hover {
+  opacity: 0.7;
+}
+
+.commandItem.danger {
+  color: #d40000;
+}
+
+.commandItem.danger:hover {
+  opacity: 0.8;
+}

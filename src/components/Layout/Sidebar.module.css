@@ -15,6 +15,9 @@
   /* ЕСЛИ ЧТО ПРОСТО СНЕСТИ ПОЛОСКУ В ЗАКРЫТОМ */
   cursor: pointer;
   position: relative;
+
+  z-index: 10;
+  pointer-events: auto;
 }
 
 .userPanel:not(.open) {

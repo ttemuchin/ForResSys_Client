@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: 24px;
+  flex: 1;
+}
+
+.configSection {
+  flex: 0 0 auto;
+}
+
+.dataSection {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: 'Euclid Circular B', 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #858585;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.saveButton {
+  padding: 8px 24px;
+  background-color: #2b2b2b;
+  color: #f9f9f9;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Euclid Circular B', 'Montserrat', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.saveButton:hover {
+  opacity: 0.8;
+}
+
+.cancelButton {
+  padding: 8px 24px;
+  background-color: transparent;
+  color: #2b2b2b;
+  border: 1px solid #2b2b2b;
+  border-radius: 25px;
+  font-family: 'Euclid Circular B', 'Montserrat', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancelButton:hover {
+  background-color: rgba(43, 43, 43, 0.05);
+}
