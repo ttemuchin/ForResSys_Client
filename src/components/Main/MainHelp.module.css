@@ -1,0 +1,54 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: opacity 0.2s ease;
+}
+
+/* .listItem:hover {
+  opacity: 0.7;
+} */
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  background-color: #2b2b2b;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.itemText {
+  font-family: 'Euclid Circular B', 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #2b2b2b;
+}
+
+@media (max-width: 768px) {
+  .list {
+    gap: 12px;
+  }
+  
+  .itemText {
+    font-size: 14px;
+  }
+  
+  .bullet {
+    width: 5px;
+    height: 5px;
+  }
+}

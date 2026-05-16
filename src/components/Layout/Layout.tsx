@@ -1,6 +1,7 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import styles from './Layout.module.css';
+import Recents from '../Recents';
 
 type LayoutProps = {
   leftSlot?: React.ReactNode;
@@ -25,7 +26,7 @@ const Layout: React.FC<LayoutProps> = ({
       </main>
       
       <aside className={styles.rightPanel}>
-        {rightSlot}
+        {rightSlot ?? <Recents />}
       </aside>
     </div>
   );

@@ -1,0 +1,91 @@
+.container {
+  /* width: 182px; */
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+  overflow: hidden;
+  /* background: linear-gradient(135deg, #f0f4f8 0%, #e8eef4 100%); */
+}
+
+.title {
+  font-family: 'Gotham', 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  color: #2b2b2b;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.recentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* 1.5x от line-height: 28px * 0.5 = 14px */
+  width: 100%;
+  overflow-y: hidden;
+  flex: 1;
+}
+
+.recentItem {
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  width: 100%;
+}
+
+.recentItem:hover {
+  opacity: 0.7;
+}
+
+.itemText {
+  font-family: 'Euclid Circular B', 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4; /* 28px */
+  color: #2b2b2b;
+  display: block;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 160px;
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+  
+  .itemText {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  
+  .recentsList {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 140px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .itemText {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  .recentsList {
+    gap: 10px;
+  }
+}
