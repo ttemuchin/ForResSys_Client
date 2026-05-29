@@ -38,6 +38,7 @@ const Recents: React.FC = () => {
         const itemsToShow = Math.min(Math.max(maxItems, 5), 7, mockRecents.length);
         setVisibleItems(mockRecents.slice(0, itemsToShow));
         setContainerHeight(height);
+        console.log(containerHeight)
       }
     };
 

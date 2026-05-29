@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { MAIN_ROUTE, BASES_ROUTE, PRED_ROUTE, LIMS_ROUTE, LOGIN_ROUTE } from '../../consts';
-import { useAuthStore } from '../../store/authStore';
+import { useAuthStore } from '../../store/AuthStore';
 import styles from './Sidebar.module.css';
 import cn from 'classnames';
 
 const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-//   const { isAuth, logout } = useAuthStore();
-    const isAuth = true;
-
+  const { isAuth, logout, user } = useAuthStore();
+  
   const menuItems = [
     { path: BASES_ROUTE, label: 'Bases' },
     { path: PRED_ROUTE, label: 'Predict samples' },
@@ -35,9 +34,11 @@ const Sidebar: React.FC = () => {
   };
 
   const handleLogout = () => {
-    // logout();
-    void navigate(LOGIN_ROUTE);
-    setIsOpen(false);
+    void (async () => {
+      await logout();
+      void navigate(LOGIN_ROUTE);
+      setIsOpen(false);
+    })();
   };
 
   const handleClose = () => {
@@ -57,7 +58,9 @@ const Sidebar: React.FC = () => {
             className={styles.logo}
             onClick={isOpen ? handleLogoClick : undefined}
           />
-          <span className={styles.userName}>Name</span>
+          <span className={styles.userName}>
+            {isAuth && user ? user.name : ''}
+          </span>
         </div>
 
         {!isOpen && (

@@ -7,12 +7,11 @@ const MainContent: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.header}>
         <div className={styles.titleSection}>
-          <h1 className={styles.title}>Resonance Systems | Analysis with ML</h1>
+          <h1 className={styles.title}>Resonance Systems | NMR Analysis</h1>
           <p className={styles.subtitle}>Laboratory practice with AI</p>
         </div>
       </div>
 
-      {/* Компонент помощи */}
       <MainHelp />
     </div>
   );

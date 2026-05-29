@@ -1,11 +1,10 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { authRoutes, publicRoutes } from '../routes';
 import PrivateRoute from './PrivateRoute';
-import { useAuthStore } from '../store/authStore';
+import { useAuthStore } from '../store/AuthStore';
 
 const AppRouter: React.FC = () => {
-//   const { isAuth } = useAuthStore();
-  const isAuth = true;
+  const { isAuth } = useAuthStore();
 
   return (
     <Routes>
